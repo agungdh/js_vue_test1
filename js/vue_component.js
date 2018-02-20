@@ -1,5 +1,18 @@
 Vue.component('testcomponent',{
-	template : '<div><h1>This is coming from component</h1></div>'
+	template : '<div v-on:mouseover="changename()" v-on:mouseout="originalname();"><h1>Custom Component created by <span id="name">{{name}}</span></h1></div>',
+	data: function() {
+		return {
+			name : "Awal"
+		}
+	},
+	methods:{
+		changename : function() {
+			this.name = "Ganti";
+		},
+		originalname: function() {
+			this.name = "Ori";
+		}
+	}
 });
 
 var vm = new Vue({
