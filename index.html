@@ -5,16 +5,11 @@
 	<script type="text/javascript" src="js/vue.js"></script>
 </head>
 <body>
-	<div id="intro" style="text-align:center;">
-	<h1>{{ message }}</h1>
+	<div id="vue_det">
+	<h1>Nama Cowo : {{cowo}}</h1>
+	<h1>Nama Cewe : {{cewe}}</h1>
+	<h1>Keterangan : {{keterangan()}}</h1>
 	</div>
-	<script type="text/javascript">
-	var vue_det = new Vue({
-	el: '#intro',
-	data: {
-	message: 'My first VueJS Task'
-	}
-	});
-	</script>
+	<script type="text/javascript" src="js/vue_instance.js"></script>
 </body>
 </html>
