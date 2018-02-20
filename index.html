@@ -5,11 +5,15 @@
 	<script type="text/javascript" src="js/vue.js"></script>
 </head>
 <body>
-	<div id="vue_det">
-	<h1>Nama Cowo : {{cowo}}</h1>
-	<h1>Nama Cewe : {{cewe}}</h1>
-	<h1>Keterangan : {{keterangan()}}</h1>
-	</div>
-	<script type="text/javascript" src="js/vue_instance.js"></script>
+	<script type="text/javascript">
+	var _obj = { fname: "Raj", lname: "Singh"}
+	// direct instance creation
+	var vm = new Vue({
+	data: _obj
+	});
+	console.log(vm.fname);
+	console.log(vm.$data);
+	console.log(vm.$data.fname);
+	</script>
 </body>
 </html>
